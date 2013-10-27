@@ -77,7 +77,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init
 
 # OmniTorch
 PRODUCT_PACKAGES += OmniTorch
