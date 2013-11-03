@@ -81,6 +81,9 @@ BOARD_USES_SEPERATED_VOIP := true
 # Use seperate devices for 3-pole headset
 BOARD_USES_SEPERATED_HEADSET_MIC := true
 
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
+
 #TWRP
 DEVICE_RESOLUTION := 1080x1920
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -106,7 +109,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/f
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
 #        device/samsung/jf-common/sepolicy
-#
+
 #BOARD_SEPOLICY_UNION += \
 #	file_contexts \
 #	property_contexts \
