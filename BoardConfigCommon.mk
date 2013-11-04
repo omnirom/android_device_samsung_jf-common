@@ -105,35 +105,35 @@ BOARD_USES_SEPERATED_VOIP := true
 BOARD_USES_SEPERATED_HEADSET_MIC := true
 
 # SELinux
-#BOARD_SEPOLICY_DIRS += \
-#        device/samsung/jf-common/sepolicy
-#
-#BOARD_SEPOLICY_UNION += \
-#	file_contexts \
-#	property_contexts \
-#	te_macros \
-#	bluetooth_loader.te \
-#	bridge.te \
-#	camera.te \
-#	conn_init.te \
-#	device.te \
-#	dhcp.te \
-#	domain.te \
-#	drmserver.te \
-#	file.te \
-#	init.te \
-#	kickstart.te \
-#	mediaserver.te \
-#	mpdecision.te \
-#	netmgrd.te \
-#	property.te \
-#	qmux.te \
-#	rild.te \
-#	rmt.te \
-#	sensors.te \
-#	surfaceflinger.te \
-#	system.te \
-#	tee.te \
-#	thermald.te \
-#	ueventd.te \
-#	wpa_supplicant.te
+BOARD_SEPOLICY_DIRS += \
+        device/samsung/jf-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+	file_contexts \
+	property_contexts \
+        te_macros \
+	bluetooth_loader.te \
+	bridge.te \
+	camera.te \
+	conn_init.te \
+	device.te \
+        dhcp.te \
+	domain.te \
+	drmserver.te \
+	file.te \
+	init.te \
+	kickstart.te \
+	mediaserver.te \
+	mpdecision.te \
+	netmgrd.te \
+	property.te \
+	qmux.te \
+	rild.te \
+	rmt.te \
+	sensors.te \
+	surfaceflinger.te \
+	system.te \
+	tee.te \
+	thermald.te \
+	ueventd.te \
+	wpa_supplicant.te
