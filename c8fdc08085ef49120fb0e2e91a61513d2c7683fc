@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab89d9a9_7ff14fc9",
+        "filename": "overlay/packages/apps/OmniGears/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000147
+      },
+      "writtenOn": "2013-11-04T20:43:26Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "c8fdc08085ef49120fb0e2e91a61513d2c7683fc",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
