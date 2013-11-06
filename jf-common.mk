@@ -14,16 +14,16 @@
 # limitations under the License.
 #
 
-PRODUCT_COPY_FILES += \
-    device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
-    device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
-    device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
-    device/samsung/jf-common/kernel:kernel
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 ## Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/jf-common/jf-common-vendor.mk)
+
+PRODUCT_COPY_FILES += \
+    device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
+    device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
+    device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
+    device/samsung/jf-common/twrp.fstab:recovery/root/etc/twrp.fstab
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
@@ -35,10 +35,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
-
-# Expose Irda feature
-PRODUCT_COPY_FILES += \
-    device/samsung/jf-common/etc/com.sec.feature.irda_service.xml:system/etc/permissions/com.sec.feature.irda_service.xml
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -79,6 +75,7 @@ PRODUCT_PACKAGES += \
     initlogo.rle \
     init.bt.rc \
     init.carrier.rc \
+    init.crda.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -95,7 +92,10 @@ PRODUCT_PACKAGES += OmniTorch
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface \
-    macloader
+    macloader \
+    crda \
+    regulatory.bin \
+    linville.key.pub.pem
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -118,9 +118,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Lights
 PRODUCT_PACKAGES += lights.msm8960
-
-# Irda
-PRODUCT_PACKAGES += irda.msm8960
 
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
