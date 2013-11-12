@@ -250,4 +250,13 @@
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+
+    <!-- Enables proper GPS handling -->
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+    <!-- The standard AOSP fused location provider -->
+    <item>com.android.location.fused</item>
+    <!-- The Google provider -->
+    <item>com.google.android.gms</item>
+   </string-array>
+
 </resources>
