@@ -14,17 +14,16 @@
 # limitations under the License.
 #
 
-PRODUCT_COPY_FILES += \
-    device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
-    device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
-    device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
-    device/samsung/jf-common/kernel:kernel
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/jf-common/jf-common-vendor.mk)
 
+PRODUCT_COPY_FILES += \
+	device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
+	device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
+	device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
+	device/samsung/jf-common/twrp.fstab:recovery/root/etc/twrp.fstab
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
 
