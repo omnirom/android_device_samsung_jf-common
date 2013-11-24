@@ -83,8 +83,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    init
+    ueventd.qcom.rc
 
 # Recovery
 PRODUCT_COPY_FILES += \
