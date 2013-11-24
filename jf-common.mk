@@ -20,20 +20,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/samsung/jf-common/jf-common-vendor.mk)
 
 PRODUCT_COPY_FILES += \
-    device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
-    device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
-    device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
+    device/samsung/jf-common/bin/libsec_km.so:recovery/root/sbin/libsec_km.so \
+    device/samsung/jf-common/bin/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
+    device/samsung/jf-common/bin/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
     device/samsung/jf-common/twrp.fstab:recovery/root/etc/twrp.fstab
+
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -76,15 +73,14 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    initlogo.rle \
+    init.local.rc \
     init.bt.rc \
     init.carrier.rc \
     init.crda.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.qcom.rc \
-    init
+    ueventd.qcom.rc
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -92,6 +88,11 @@ PRODUCT_COPY_FILES += \
     
 # OmniTorch
 PRODUCT_PACKAGES += OmniTorch
+
+# Compcache/Zram support
+PRODUCT_COPY_FILES += \
+    device/samsung/jf-common/bin/compcache:system/bin/compcache \
+    device/samsung/jf-common/bin/handle_compcache:system/bin/handle_compcache
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -125,6 +126,10 @@ PRODUCT_PACKAGES += lights.msm8960
 
 # Irda
 PRODUCT_PACKAGES += irda.msm8960
+
+# Increase the HWUI font cache since we have tons of RAM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hwui.text_cache_width=2048
 
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
