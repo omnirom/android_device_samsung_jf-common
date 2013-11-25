@@ -119,36 +119,3 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Camera
 TARGET_NEED_CAMERA_ZSL := true
 TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-        device/samsung/jf-common/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-	file_contexts \
-	property_contexts \
-	te_macros \
-	bluetooth_loader.te \
-	bridge.te \
-	camera.te \
-	conn_init.te \
-	device.te \
-	dhcp.te \
-	domain.te \
-	drmserver.te \
-	file.te \
-	init.te \
-	kickstart.te \
-	mediaserver.te \
-	mpdecision.te \
-	netmgrd.te \
-	qmux.te \
-	rild.te \
-	rmt.te \
-	sensors.te \
-	surfaceflinger.te \
-	system.te \
-	tee.te \
-	thermald.te \
-	ueventd.te \
-	wpa_supplicant.te
