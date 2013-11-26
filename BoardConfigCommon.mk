@@ -110,6 +110,10 @@ BOARD_USES_SEPERATED_HEADSET_MIC := true
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# Use device specific camera
+USE_DEVICE_SPECIFIC_CAMERA := true
+USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
         device/samsung/jf-common/sepolicy
