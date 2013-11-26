@@ -80,9 +80,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/jf-common/bluetoot
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/jf-common/bluetooth/vnd_jf.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
-# Don't use qcom camera HAL
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
 
@@ -109,6 +106,10 @@ BOARD_USES_SEPERATED_HEADSET_MIC := true
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
+
+# Use device specific camera
+USE_DEVICE_SPECIFIC_CAMERA := true
+USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
