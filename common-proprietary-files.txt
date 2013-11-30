@@ -18,8 +18,8 @@ vendor/firmware/bcm4335_semco.hcd
 lib/libacdbloader.so
 lib/libaudcal.so
 lib/libcsd-client.so
-etc/firmware/wcd9310/wcd9310_anc.bin
-etc/firmware/wcd9310/wcd9310_mbhc.bin
+#etc/firmware/wcd9310/wcd9310_anc.bin
+#etc/firmware/wcd9310/wcd9310_mbhc.bin
 
 # mmparser extended
 lib/libExtendedExtractor.so
@@ -28,31 +28,33 @@ lib/libmmosal.so
 lib/libdivxdrm.so
 
 # Adreno GPU (Available on Nexus 4)
+lib/libadreno_utils.so
+
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libGLESv2S3D_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/libc2d2_z180.so
-vendor/lib/libc2d2_a3xx.so
+
+vendor/lib/libC2D2.so
+vendor/lib/libRSDriver_adreno.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/libOpenCL.so
+vendor/lib/libOpenVG.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d30.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-a3xx.so
-vendor/lib/libC2D2.so
-vendor/lib/libOpenVG.so
-vendor/lib/libCB.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libOpenCL.so
-vendor/lib/libsc-a2xx.so
+vendor/lib/libqc-opt.so
+vendor/lib/librs_adreno.so
+vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a3xx.so
+vendor/lib/libwvm.so
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 etc/firmware/vidc_1080p.fw
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 
 # Graphics
 lib/libmm-color-convertor.so
@@ -116,6 +118,7 @@ cameradata/RS_M10MO_SS.bin
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 lib/hw/vendor-camera.msm8960.so:lib/hw/camera.msm8960.so
+lib/libadsprpc.so
 lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_video_hd.so
