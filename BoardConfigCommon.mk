@@ -83,6 +83,13 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 # Don't use qcom camera HAL
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Adreno
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+HAVE_ADRENO_SOURCE := false
+
+# Sensors
+SENSORS_NEED_SETRATE_ON_ENABLE := true
+
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
 
