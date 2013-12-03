@@ -88,6 +88,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Don't use qcom camera HAL
 USE_DEVICE_SPECIFIC_CAMERA := true
+USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8960
@@ -117,6 +118,8 @@ BOARD_USES_SEPERATED_HEADSET_MIC := true
 BOARD_USES_QC_TIME_SERVICES := true
 
 # SELinux
+TARGET_USE_SELINUX := false
+ifneq ($(TARGET_USE_SELINUX),false)
 BOARD_SEPOLICY_DIRS += \
         device/samsung/jf-common/sepolicy
 
@@ -148,3 +151,5 @@ BOARD_SEPOLICY_UNION += \
 	thermald.te \
 	ueventd.te \
 	wpa_supplicant.te
+
+endif
