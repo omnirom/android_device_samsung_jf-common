@@ -16,4 +16,4 @@
 
 # vold managed volumes
 /devices/platform/msm_sdcc.2/mmc_host/mmc2         auto                 auto    defaults                                                                    voldmanaged=sdcard1:auto
-/devices/platform/msm_hsusb_host/usb               auto                 auto    defaults                                                                    voldmanaged=sda:auto
+/devices/platform/msm_hsusb_host/usb               auto                 auto    defaults                                                                    voldmanaged=usbdisk:auto
