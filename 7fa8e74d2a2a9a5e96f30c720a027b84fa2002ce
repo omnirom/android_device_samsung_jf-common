@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_1c284c2e",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000174
+      },
+      "writtenOn": "2013-12-10T09:38:41Z",
+      "side": 1,
+      "message": "Please delete that whitespace :)",
+      "revId": "7fa8e74d2a2a9a5e96f30c720a027b84fa2002ce",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
