@@ -196,6 +196,8 @@ on post-fs-data
     mkdir /data/media 0775 media_rw media_rw
     chown media_rw media_rw /data/media
 
+    chown root root /mnt/media_rw
+
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 
     # Create the directories used by the Wireless subsystem
@@ -404,12 +406,12 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     oneshot
 
 service p2p_supplicant /system/bin/wpa_supplicant \
-    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/etc/wifi/wpa_supplicant_overlay.conf -N \
+    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf
+    -I/system/etc/wifi/wpa_supplicant_overlay.conf \
+    -O/data/misc/wifi/sockets -N \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 \
-    -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
+    -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin \
 #   we will start as root and wpa_supplicant will switch to user wifi
 #   after setting up the capabilities required for WEXT
 #   user wifi
