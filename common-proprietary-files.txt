@@ -18,8 +18,8 @@ vendor/firmware/bcm4335_semco.hcd
 lib/libacdbloader.so
 lib/libaudcal.so
 lib/libcsd-client.so
-etc/firmware/wcd9310/wcd9310_anc.bin
-etc/firmware/wcd9310/wcd9310_mbhc.bin
+#etc/firmware/wcd9310/wcd9310_anc.bin
+#etc/firmware/wcd9310/wcd9310_mbhc.bin
 
 # mmparser extended
 lib/libExtendedExtractor.so
@@ -34,7 +34,7 @@ vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libGLESv2S3D_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/libc2d2_z180.so
+
 vendor/lib/libc2d2_a3xx.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-a3xx.so
@@ -43,16 +43,10 @@ vendor/lib/libOpenVG.so
 vendor/lib/libCB.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libOpenCL.so
-vendor/lib/libsc-a2xx.so
 vendor/lib/libsc-a3xx.so
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 etc/firmware/vidc_1080p.fw
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 
 # Graphics
 lib/libmm-color-convertor.so
