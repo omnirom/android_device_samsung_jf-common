@@ -116,6 +116,10 @@ BOARD_USES_SEPERATED_HEADSET_MIC := true
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# Camera
+TARGET_NEED_CAMERA_ZSL := true
+TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
         device/samsung/jf-common/sepolicy
