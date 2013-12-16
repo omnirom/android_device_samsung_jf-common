@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_eb2110af",
+        "filename": "liblights/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000305
+      },
+      "writtenOn": "2013-12-16T02:15:47Z",
+      "side": 1,
+      "message": "btw, typo ;p\nimplementation",
+      "revId": "d10c35c41d6623a91571f83a99057eb3a94ee2ab",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
