@@ -67,13 +67,21 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>1</item>
-        <item>1</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>14</item>   <!-- 0-10 -->
+        <item>28</item>   <!-- 10-50 -->
+        <item>37</item>   <!-- 50-100 -->
+        <item>51</item>   <!-- 100-200 -->
+        <item>71</item>   <!-- 200-400 -->
+        <item>80</item>   <!-- 400-500 -->
+        <item>96</item>   <!-- 500-800 -->
+        <item>108</item>  <!-- 800-1000 -->
+        <item>144</item>  <!-- 1000-1600 -->
+        <item>181</item>  <!-- 1600-3000 -->
+        <item>255</item>  <!-- 3000+ -->
     </integer-array>
 
+    <!-- Boolean indicating whether we want button brightness support -->
+    <bool name="config_button_brightness_support">true</bool>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">10</integer>
@@ -243,10 +251,6 @@
 
     <!-- Panel auto-brightness configuration value -->
     <!-- <integer name="config_panelAutoBrightnessValue">1</integer> -->
-
-    <!-- True if the Irda service should be started at system start. This currently only
-         supports Samsung Galaxy S4. -->
-    <!-- <bool name="config_enableIrdaManagerService">true</bool> -->
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
