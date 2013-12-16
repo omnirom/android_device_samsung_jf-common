@@ -86,6 +86,17 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 # Needed for blobs
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
+<<<<<<< HEAD
+=======
+# Don't use qcom camera HAL
+USE_DEVICE_SPECIFIC_CAMERA := true
+# USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
+
+# Adreno
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+HAVE_ADRENO_SOURCE := false
+
+>>>>>>> parent of 60a8b73... Revert "jf: use flo adreno"
 # Sensors
 SENSORS_NEED_SETRATE_ON_ENABLE := true
 
