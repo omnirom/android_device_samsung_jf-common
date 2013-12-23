@@ -118,8 +118,7 @@ TARGET_NEED_CAMERA_ZSL := true
 TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
 
 # Boostpulse
-TARGET_MPDECISION_BOOST_SOCKET := \
-    /sys/devices/system/cpu/cpufreq/intellidemand/boostpulse
+TARGET_MPDECISION_BOOST_SOCKET := /sys/devices/system/cpu/cpufreq/intellidemand/boostpulse
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \

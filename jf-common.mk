@@ -85,12 +85,16 @@ PRODUCT_PACKAGES += \
 # Recovery
 PRODUCT_COPY_FILES += \
     device/samsung/jf-common/twrp.fstab:recovery/root/etc/twrp.fstab
-    
+
 # OmniTorch
 PRODUCT_PACKAGES += OmniTorch
 
 # JF Control
 PRODUCT_PACKAGES += JFControl
+
+# init.d scripts
+PRODUCT_COPY_FILES += \
+    device/samsung/jf-common/rootdir/etc/init.d/91mpdecision:system/etc/init.d/91mpdecision
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
