@@ -132,10 +132,6 @@ on post-fs-data
     # h2k permission
     chmod 0644 /efs/redata.bin
 
-    # communicate with mpdecision and thermald
-    mkdir /dev/socket/mpdecision 0770 system system
-    chmod 2770 /dev/socket/mpdecision
-
     # Permissions for Camera
     chown system radio /sys/class/camera/rear/rear_camfw
     chown system radio /sys/class/camera/rear/rear_camtype
@@ -415,10 +411,6 @@ on property:qcom.thermal=thermald
 
 on property:qcom.thermal=thermal-engine
     start thermal-engine
-
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    user root
-    disabled
 
 service kickstart /system/bin/qcks -i /firmware-mdm/image/
     user root
