@@ -1,5 +1,4 @@
 # Bins
-bin/mpdecision
 #bin/prepare_param.sh
 
 # Thermal
