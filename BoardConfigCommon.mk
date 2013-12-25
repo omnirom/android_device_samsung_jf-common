@@ -116,6 +116,8 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Camera
 TARGET_NEED_CAMERA_ZSL := true
 TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
+TARGET_ADD_ISO_MODE_1600 := true
+TARGET_ADD_ISO_MODE_HJR := true
 
 # Boostpulse
 TARGET_MPDECISION_BOOST_SOCKET := /sys/devices/system/cpu/cpufreq/interactive/boostpulse
