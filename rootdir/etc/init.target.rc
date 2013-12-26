@@ -505,8 +505,8 @@ service scranton_RD /system/bin/scranton_RD
 on property:sys.qseecomd.enable=true
     start scranton_RD
 
-# boot completed
-on property:dev.bootcomplete=1
+# bootanim done
+on property:service.bootanim.exit=1
     # disable pulsing led on boot complete
     write /sys/class/sec/led/led_pattern 0
 
