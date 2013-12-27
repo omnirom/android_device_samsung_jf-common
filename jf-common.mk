@@ -89,9 +89,6 @@ PRODUCT_COPY_FILES += \
 # OmniTorch
 PRODUCT_PACKAGES += OmniTorch
 
-# JF Control
-PRODUCT_PACKAGES += JFControl
-
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
     device/samsung/jf-common/bin/compcache:system/bin/compcache \
