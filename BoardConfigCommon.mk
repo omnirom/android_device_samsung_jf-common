@@ -120,6 +120,9 @@ TARGET_NEED_SAMSUNG_MAGIC_ZSL_1508 := true
 # Boostpulse
 TARGET_MPDECISION_BOOST_SOCKET := /sys/devices/system/cpu/cpufreq/interactive/boostpulse
 
+# Hardware button backlights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
         device/samsung/jf-common/sepolicy
