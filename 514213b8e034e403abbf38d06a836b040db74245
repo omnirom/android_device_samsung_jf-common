@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_c8f44cbd",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 7
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000305
+      },
+      "writtenOn": "2013-12-30T01:07:56Z",
+      "side": 0,
+      "message": "shouldnt be removed, rather added back. :)",
+      "revId": "514213b8e034e403abbf38d06a836b040db74245",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
